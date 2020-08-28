@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Images/favicon.png') }}" type="image/png" sizes="25x25" />
+    <title> MyApp</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome-4.1.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body background="/static/Images/idea.jpg">
+    <div id="wrapper">
+ <!-- ******************** Header Starts******************* -->
+
+		<nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+		
+		<ul id="titles" class="nav nav-pills">
+			<li class="separator">  <a class="navbar-brand" href='/' style="color:white">  Home </a> </li>
+			<li>
+       		 <a class="navbar-brand" href="/" style="color:white"><p>About me</p></a>
+			</li>
+			<li class="pull-right"><a class="navbar-brand" href="/" style="color:white" ><p>Contact</p></a>
+			</li>
+            </li>
+		</ul>
+		
+	  </nav>
+					<div class="section-row">
+					</br>
+						<h3>Bias-Variance Tradeoff</h3>
+						<p>We are going to talk about one of the most interesting as well as confusing ideas of the machine Learning world. The concept is very popularly known as the bias-variance tradeoff. From reading literature on statistical learning and AI-ML itself, I have realized that the idea is also closely woven with the commentary on estimation(fitting) vs prediction. During school or college, we did experiments where we collected data about pendulum oscillations to calculate Hooke's constant. The basic idea was always to fit a straight line to data,&nbsp;keeping in mind the errors or uncertanities of experiment being carried out.&nbsp;The linear&nbsp;expression that we believe explains the process, is used to fit data and values of the parameters are reported. The idea of Machine Learning is not very different.&nbsp;It&nbsp;also seeks to find unknown parameters of&nbsp;expressions or models as we call them. However, there is always a larger goal to uncover the whole expression or model itself, that would explain data at hand, the best.</p>
+<p>For the Hooke&rsquo;s law experiment, statistical theory suggests that there could be more complex higher order polynomials or mixture of models to explain data better&nbsp;while&nbsp;linear model is a really good working approximation too. Similarly, there are various real world processes like dependence of real estate price on size, location and age, that can be&nbsp;explained using linear or quatractic models with acceptable shortcomings. Moreover, there are very complex processes like language translation and autonomous-driving for which no model is imaginable upfront. The idea of machine learning is thus, to uncover better than existing and/or unknown models for the processes around us and then estimate correct parameters for the model.</p>
+<p>Let's say were given data from Hooke's law experiment and were asked to interpolate and extrapolate the same. As we already believe in the linear model, we will fit&nbsp;existing&nbsp;data&nbsp;to it, report parameters and use the expression with reported parameters to interpolate and extrapolate. However, using a mchine learning approach does not restrict you to a linear model and you could&nbsp;decide on a&nbsp;stighly complex but more accurate model that with its correct parameters, not only fits data better than the linear one but also interpolates/extrapolates with higher accuracy. Very interestingly though, if you choose a very complex model, it turns out that although fit to data will be very accurate, interpolation and extrapolation may not be so. This is indeed the whole idea of bias-variance tradeoff. A high variance model is&nbsp;very accurate on existing data and is usually more complex. On the other hand, a model with lesser variance will be comparatively simpler and lesser accurate on existing data but surprisingly, may be better at the task of&nbsp;interpolation and extrapolation. The decrease in variance&nbsp;means increase in bias or in other words, a decrease in the capture of data's variance by model. The failure is attributed to model&rsquo;s inability to ignore noise present in the process. This noises makes it catch short term or local patterns(absent elsewhere), reach incorrect conclusions about process and thus fail at generalization. An aptly biased model will instead be unable to catch all patterns due to simplicity and will focus on stronger/larger patterns only, leading to better generalizations. It should also be noted that a very high-bias model will also underperform at both fitting(explaining) and extrapolating(predicting) data like linear model for real-estate price.&nbsp;The holy grail of machine learning is thus to find a model that explains enough variance of data from existing points and is biased enough to generalize for unknown data points when it comes to predicting.</p>
+<p>Let us follow a simple exercise to see the bias-variance tradeoff in action. We will begin by using a known model to generate some data points and add some noise to the data.</p>
+<p>We will then plot the original points as well as the data with noise added. You can manually select the number of points you wish to plot and degree of polynomial you wish to use to generate data.</p>
+<p>You can then choose the degrees of polynomials you wish to fit to the generated data. Please enter the same as comma-separated values. We will fit the polynomial and display the in-sample error i.e. the error in fitting the existing data points as E<sub>in.&nbsp;</sub>We will also try to extrapolate the data with fitted expressions and calculate E<sub>out&nbsp;</sub>i.e. error in extrapolating the data.</p>
+					</div>
+		<iframe src="http://127.0.0.1:8050/" width="100" frameborder="0" allowfullscreen>
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+        <iframe src="http://127.0.0.1:8050/1" width="100" frameborder="0" allowfullscreen>
+  <p>Your browser does not support iframes.</p>
+</iframe>
+
+        <p>Ponits to note:</p>
+<p>1. E<sub>in&nbsp;</sub>is almost always lowest for the highest degree of polynomial fitted i.e. the model with highest variance fits data the best.</p>
+<p>2.&nbsp;E<sub>out&nbsp;</sub>is not always the lowest for the model with highest vaiance, rather it could be lower for models with lesser variance than the generating model itself.</p>
+<p>3. As the number of data points to fit increase, E<sub>out&nbsp;</sub>decreases for higher variance models and they become acceptable.&nbsp;&nbsp;</p>
+					<!-- /post content -->
+
+
+
+  <!--************ FOOTER STARTS **************-->
+
+  <footer id="footer" class="navbar-fixed-bottom1">
+   <ul>
+    <li > <a href="#"> Terms of Service </a> &nbsp; | &nbsp;    </li>
+    <li> <a href="#"> Privacy Policy  </a> &nbsp;|   </li>
+     <li> © vishalsingh.mkn@gmail.com, All Rights Reserved </li>
+
+    </ul>
+
+  </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+	<script src="/static/js/jquery-1.11.0.js"></script>
+  <script src="/static/js/angular.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!--<script src="Contents/js/tabMenu.js"></script>-->
+
+</body>
+
+</html>

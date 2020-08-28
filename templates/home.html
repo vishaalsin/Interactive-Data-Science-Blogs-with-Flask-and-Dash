@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='Images/favicon.png') }}" type="image/png" sizes="25x25" />
+    <title> mathSavvy!!</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/Style.css') }}">
+    <!-- Custom Fonts -->
+    <link href="{{ url_for('static', filename='font-awesome-4.1.0/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+    <div id="wrapper">
+ <!-- ******************** Header Starts******************* -->
+
+        <nav class="navbar navbar-inverse navbar-static-top" role="navigation" style="margin-bottom: 0">
+
+		<ul id="titles" class="nav nav-pills">
+			<li class="separator">  <a class="navbar-brand" href='/' style="color:white">  Home </a> </li>
+			<li>
+       		 <a class="navbar-brand" href="/" style="color:white"><p>Jupyter Notebooks</p></a>
+			</li>
+			<li>
+       		 <a class="navbar-brand" href="/" style="color:white"><p>Vedios</p></a>
+			</li>
+			<li class="pull-right"><a class="navbar-brand" href="/" style="color:white" ><p>Contact</p></a>
+			</li>
+            </li>
+		</ul>
+
+	  </nav>
+        	<!-- SECTION -->
+	<div class="section">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div id="hot-post" class="row hot-post">
+				<div class="col-md-4 hot-post-left">
+					<!-- post -->
+					<div class="post post-thumb">
+						<a class="post-img" href="/post/1"><img src="/static/Images/1.jpg" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a href="/post/1">1. Bias Variance Trade-off</a></h3>
+							<div class="post-category">
+								<a href="/static/category.html">FITTING</a>
+							</div>
+						</div>
+					</div>
+					<!-- /post -->
+					<div class="post post-thumb">
+						<a class="post-img" href="/post/2"><img src="/static/Images/poly-fit.png" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a href="/post/2">2. Polynomial Fitting</a></h3>
+							<div class="post-category">
+								<a href="/static/category.html">FITTING</a>
+							</div>
+						</div>
+					</div>
+					<!-- /post -->
+				</div>
+
+				<div class="col-md-4 hot-post-right">
+
+					<!-- post -->
+					<div class="post post-thumb">
+						<a class="post-img" href="/post/2"><img src="/static/Images/lin-reg.png" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a href="/post/3">3. Linear Regression</a></h3>
+							<div class="post-category">
+								<a href="/static/category.html">MODELLING</a>
+							</div>
+						</div>
+					</div>
+					<!-- /post -->
+
+					<!-- post -->
+					<div class="post post-thumb">
+						<a class="post-img" href="/post/2"><img src="/static/Images/regularizn.png" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a href="/post/4">4. Regularization</a></h3>
+							<div class="post-category">
+								<a href="/static/category.html">MODELLING</a>
+							</div>
+						</div>
+					</div>
+					<!-- /post -->
+
+				</div>
+
+				<div class="col-md-4 hot-post-right">
+					<!-- post -->
+
+					<!-- post -->
+					<div class="post post-thumb">
+						<a class="post-img" href="/post/2"><img src="/static/Images/gd.png" alt=""></a>
+						<div class="post-body">
+							<h3 class="post-title"><a href="/post/3">5. Gradient Descent</a></h3>
+							<div class="post-category">
+								<a href="/static/category.html">MODELLING</a>
+							</div>
+						</div>
+					</div>
+					<!-- /post -->
+				</div>
+			</div>
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+	</div>
+	<!-- /SECTION -->
+
+
+  <!--************ FOOTER STARTS **************-->
+
+  <footer id="footer" class="navbar-fixed-bottom1">
+   <ul>
+     <li> © vishalsingh.mkn@gmail.com, All Rights Reserved </li>
+    </ul>
+
+  </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+	<script src="/static/js/jquery-1.11.0.js"></script>
+  <script src="/static/js/angular.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!--<script src="Contents/js/tabMenu.js"></script>-->
+
+    </div></body>
+
+</html>
